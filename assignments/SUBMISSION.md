@@ -53,34 +53,38 @@ Here is how I set up the projects portion. I used h2 to title it, and within the
             </article>
         </section>
     
-Similarly, I looked through what we did in class, and formatted my table accordingly. I started with the table header, then so on. 
+Similarly, I looked through what we did in class, and formatted my table accordingly. I put it through ChatGPT to check if it thought I should change anything, and it said I should add <thead> and <tbody> tags, which I found myself agreeing with.
 
 ```html
             <!-- relevant coursework -->
                 <section class = "coursework-table">
                     <table>
-                        <th>Course Number</th>
-                        <th>Course Name</th>
-                        <th>Description</th>
-                        <tr>
-                            <td>CSC 101 / CSC 215</td>
-                            <td>Intro to Computing / Intermediate Programming</td>
-                            <td>Harness necessary skills in logic, problem-solving, and developer environments using Java.</td>
-                        </tr>
-                        <tr>
-                            <td>CSC 220</td>
-                            <td>Data Structures and Algorithms</td>
+                        <thead>
+                            <th>Course Number</th>
+                            <th>Course Name</th>
+                            <th>Description</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CSC 101 / CSC 215</td>
+                                <td>Intro to Computing / Intermediate Programming</td>
+                                <td>Harness necessary skills in logic, problem-solving, and developer environments using Java.</td>
+                            </tr>
+                            <tr>
+                                <td>CSC 220</td>
+                                <td>Data Structures and Algorithms</td>
                                 <td>Foundational knowledge of abstract data types and different searching methods.</td>
-                        </tr>
-                        <tr>
-                            <td>CSC 317</td>
-                            <td>Introduction to Web Development</td>
-                            <td>Gain skills in web development using HTML5, CSS, Javascript, and Postgres.</td>
-                        </tr>
-                        <tr>
-                            <td>CSC 340</td>
-                            <td>Programming Methodology</td>
-                            <td>Learn advanced data structures, design patterns, and ADT implementations using C++.</td>
-                        </tr>
+                            </tr>
+                            <tr>
+                                <td>CSC 317</td>
+                                <td>Introduction to Web Development</td>
+                                <td>Gain skills in web development using HTML5, CSS, Javascript, and Postgres.</td>
+                            </tr>
+                            <tr>
+                                <td>CSC 340</td>
+                                <td>Programming Methodology</td>
+                                <td>Learn advanced data structures, design patterns, and ADT implementations using C++.</td>
+                            </tr>
+                        </tbody>
                     </table>
                 </section>
