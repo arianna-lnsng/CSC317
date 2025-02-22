@@ -21,6 +21,7 @@ I started by following the instructions for the assignment in the order they wer
 ## Code Explanation:
 These anchor tags link different parts of the webpage. Following the example we were shown in class, I was able to use this feature on my assignment to navigate to certain parts of the page using the ids declared in the later portions of the site. I put these in an unordered list because it seemed the most approriate.
 
+
 ```html
 <nav class = "nav-links">
 <!-- links to navigate the webpage -->
@@ -32,6 +33,7 @@ These anchor tags link different parts of the webpage. Following the example we 
         <li><a href = "#contact">Contact</a></li>
     </ul>
 </nav>
+```
 
 Here is how I set up the projects portion. I used h2 to title it, and within the articles I chose h3's as subheadings to label the projects. I also added paragraphs to provide a subtitle for descriptions.
 
@@ -52,7 +54,8 @@ Here is how I set up the projects portion. I used h2 to title it, and within the
                 <p>Webpage made for CSC317 using HTML5 and CSS(soon)</p>
             </article>
         </section>
-    
+```
+
 Similarly, I looked through what we did in class, and formatted my table accordingly. I put it through ChatGPT to check if it thought I should change anything, and it said I should add <thead> and <tbody> tags, which I found myself agreeing with.
 
 ```html
@@ -88,3 +91,4 @@ Similarly, I looked through what we did in class, and formatted my table accordi
                         </tbody>
                     </table>
                 </section>
+```
