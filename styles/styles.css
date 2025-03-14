@@ -1,0 +1,135 @@
+/* Handwritten CSS */
+
+/* Define custom colors and default background */
+body {
+    --pink: #f8d7da;
+    --pink-2: #a35b777d;
+    --pink-3: #be598595;
+    --pink-4: #FFEDFA;
+    --pink-5: #73204ba3;
+
+    font-family: 'Playfair Display', Verdana;
+    background-color: var(--pink);
+    color: var(--pink-5);
+    margin: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Styled header */
+header {
+    background-color: var(--pink-2);
+    color: white;
+    text-align: center;
+    padding: 5%;
+}
+
+/* Image styling */
+img {
+    border: var(--pink-5);
+    border-radius: 50%;
+    border-color: var(--pink-5);
+}
+
+/* Links */
+a {
+    color: white;
+}
+
+/* Navigation styling */
+.nav-links {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--pink-3);
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    background-color: var(--pink-4);
+    color: var(--pink-5);
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+h2 {
+    display: block;
+    color: var(--pink-5);
+}
+
+/* Project cards */
+.project-card {
+    background-color: var(--pink-4);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(112, 35, 35.398);
+}
+
+/* Skills list */
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    background-color: var(--pink-3);
+    color: white;
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.education {
+    list-style: none;
+}
+.education li {
+    display: inline-block;
+    margin-left: 0;
+    padding: 8px 12px;
+}
+
+/* Coursework table */
+.coursework-table table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    background-color: var(--pink-4);
+}
+
+.coursework-table th,
+.coursework-table td {
+    border: 2px solid var(--pink-3);
+    text-align: left;
+    padding: 8px;
+}
+
+.coursework-table th {
+    background-color: var(--pink-2);
+    color: white;
+}
+
+/* Footer styling */
+footer {
+    background-color: var(--pink-2);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}

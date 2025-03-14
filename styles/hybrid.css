@@ -1,0 +1,459 @@
+/* Pink Cloud Theme Portfolio
+   Updated for Arianna Lansang's portfolio
+*/
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Tangerine:wght@400;700&display=swap');
+
+/* Define custom color variables */
+:root {
+    /* Color palette */
+    --pink-light: #ffd1dc;    /* Light pink background */
+    --pink-medium: #ffb6c1;   /* Medium pink clouds */
+    --pink-deep: #ff85a1;     /* Deep pink accents */
+    --pink-soft: #ffccd5;     /* Soft pink elements */
+    --pink-glow: #ff9aac;     /* Glowing elements */
+    --white: #ffffff;         /* Pure white */
+    --white-soft: #f9f9f9;    /* Soft white */
+    --text-dark: #5a4a4a;     /* Dark text color */
+    --text-medium: #7a6a6a;   /* Medium text color */
+    
+    /* Transparency variables */
+    --pink-light-transparent: rgba(255, 209, 220, 0.7);
+    --pink-medium-transparent: rgba(255, 182, 193, 0.6);
+    --pink-deep-transparent: rgba(255, 133, 161, 0.5);
+    --pink-soft-transparent: rgba(255, 204, 213, 0.4);
+    --white-transparent: rgba(255, 255, 255, 0.8);
+    --cloud-glow: rgba(255, 255, 255, 0.3);
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--pink-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.3"/></svg>');
+}
+
+/* Header and navigation styles */
+header {
+    background: linear-gradient(var(--pink-light-transparent), var(--pink-medium-transparent)), url('images/pink-clouds.gif');
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Cloud floating animation in header */
+header:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle, var(--white-transparent) 10%, transparent 10%),
+                      radial-gradient(circle, var(--white-transparent) 5%, transparent 5%);
+    background-size: 80px 80px, 50px 50px;
+    background-position: 0 0, 40px 40px;
+    animation: floatClouds 25s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes floatClouds {
+    0% {
+        background-position: 0 0, 40px 40px;
+    }
+    100% {
+        background-position: 80px 80px, 120px 120px;
+    }
+}
+
+header img {
+    border-radius: 50%;
+    border: 5px solid var(--white);
+    box-shadow: 0 0 30px var(--cloud-glow);
+    transition: transform 0.5s ease;
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    font-family: 'Tangerine', cursive;
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--pink-deep);
+    text-shadow: 2px 2px 10px var(--white);
+    margin-top: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-medium);
+    margin-bottom: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background-color: var(--white-transparent);
+    border: 1px solid var(--pink-medium);
+}
+
+.nav-links li a:hover {
+    background-color: var(--pink-medium-transparent);
+    color: var(--white);
+    box-shadow: 0 0 15px var(--pink-glow);
+    transform: translateY(-3px);
+    border-color: var(--white);
+}
+
+/* Main content styles */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    border-radius: 15px;
+    background-color: var(--white-transparent);
+    box-shadow: 0 5px 15px rgba(255, 154, 172, 0.2);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--pink-soft-transparent);
+}
+
+/* Cloud glow effect for sections */
+section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, var(--cloud-glow), transparent 70%);
+    pointer-events: none;
+}
+
+h2 {
+    font-family: 'Tangerine', cursive;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--pink-deep);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    text-shadow: 0 0 5px var(--white);
+}
+
+h2:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, var(--pink-medium), transparent);
+    border-radius: 3px;
+}
+
+/* About section */
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    color: var(--text-medium);
+}
+
+/* Projects section */
+#projects {
+    background-color: var(--pink-soft-transparent);
+}
+
+.project-card {
+    background-color: var(--white-transparent);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 3px 10px rgba(255, 182, 193, 0.2);
+    border-left: 5px solid var(--pink-medium);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px var(--pink-soft-transparent);
+    border-left: 5px solid var(--pink-deep);
+}
+
+.project-card h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    color: var(--pink-deep);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Skills section */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    list-style: none;
+}
+
+.skills-list li {
+    background-color: var(--white-transparent);
+    color: var(--text-dark);
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid var(--pink-medium);
+}
+
+.skills-list li:hover {
+    background-color: var(--pink-medium-transparent);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px var(--pink-soft-transparent);
+    border-color: var(--white);
+    color: var(--white);
+}
+
+/* Education section */
+.education {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.education ul {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-left: 0;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.education li {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    color: var(--text-medium);
+}
+
+.education img {
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(255, 182, 193, 0.3);
+    transition: transform 0.3s ease;
+    order: -1; /* This puts the image before the text */
+    flex-shrink: 0; /* Prevents the image from shrinking */
+}
+
+.education img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px var(--pink-medium-transparent);
+}
+
+/* Table styles */
+.coursework-table {
+    overflow-x: auto;
+    margin-top: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+th, td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid var(--pink-medium);
+}
+
+th {
+    background-color: var(--pink-medium-transparent);
+    color: var(--text-dark);
+}
+
+tr:hover {
+    background-color: var(--pink-soft-transparent);
+}
+
+/* Cat video section */
+#cat-video {
+    text-align: center;
+}
+
+#cat-video h3 {
+    font-family: 'Tangerine', cursive;
+    font-size: 2.5rem;
+    color: var(--pink-deep);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px var(--white);
+}
+
+iframe {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.3);
+    border: 2px solid var(--pink-medium);
+}
+
+/* Contact section */
+.contact-info {
+    text-align: center;
+}
+
+.contact-info p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    color: var(--text-medium);
+}
+
+.contact-info a {
+    color: var(--pink-deep);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+}
+
+.contact-info a:hover {
+    color: var(--pink-glow);
+    border-bottom: 2px solid var(--pink-glow);
+    text-shadow: 0 0 10px var(--cloud-glow);
+}
+
+/* Footer */
+footer {
+    background-color: var(--pink-light-transparent);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+    position: relative;
+    border-top: 1px solid var(--pink-medium);
+}
+
+footer:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, transparent, var(--white), transparent);
+}
+
+footer p {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-medium);
+}
+
+/* Fancy animations */
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes cloudGlow {
+    0% { box-shadow: 0 0 10px var(--pink-soft-transparent); }
+    50% { box-shadow: 0 0 30px var(--pink-medium-transparent); }
+    100% { box-shadow: 0 0 10px var(--pink-soft-transparent); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating clouds background */
+.cloud {
+    position: fixed;
+    background-color: var(--white-transparent);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(3px);
+    pointer-events: none;
+}
+
+/* Apply animations */
+section {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 3.5rem;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    .skills-list {
+        justify-content: flex-start;
+    }
+    
+    iframe {
+        height: 240px;
+    }
+}

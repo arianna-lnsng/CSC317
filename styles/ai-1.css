@@ -1,0 +1,421 @@
+/* Rapunzel from Tangled Portfolio Theme
+   Created for Arianna Lansang's portfolio
+   
+   Color palette:
+   - Purple: #b76cc4 (Rapunzel's dress)
+   - Light purple: #e4b7f0 (Softer purple accents)
+   - Gold: #ffd84d (Rapunzel's hair)
+   - Warm pink: #ffd1dc (Soft pink for backgrounds)
+   - Dark purple: #6a4873 (For text and accents)
+   - Lantern glow: #ffefba (Warm highlights)
+*/
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Satisfy&display=swap');
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #fff9fc;
+    color: #6a4873;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header and navigation styles */
+header {
+    background: linear-gradient(rgba(255, 209, 220, 0.8), rgba(228, 183, 240, 0.8)), url('images/pink-clouds.gif');
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(106, 72, 115, 0.2);
+}
+
+header img {
+    border-radius: 50%;
+    border: 5px solid #ffd84d;
+    box-shadow: 0 0 20px rgba(255, 216, 77, 0.6);
+    transition: transform 0.5s ease;
+}
+
+header img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 216, 77, 0.8);
+}
+
+header h1 {
+    font-family: 'Satisfy', cursive;
+    font-size: 3.5rem;
+    color: #6a4873;
+    text-shadow: 2px 2px 4px rgba(255, 216, 77, 0.5);
+    margin-top: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #6a4873;
+    margin-bottom: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #6a4873;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-links li a:hover {
+    background-color: #ffd84d;
+    color: #6a4873;
+    box-shadow: 0 0 10px rgba(255, 216, 77, 0.8);
+    transform: translateY(-3px);
+}
+
+/* Main content styles */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(106, 72, 115, 0.1);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(106, 72, 115, 0.15);
+}
+
+h2 {
+    font-family: 'Satisfy', cursive;
+    font-size: 2.5rem;
+    color: #b76cc4;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+h2:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, #ffd84d, #b76cc4, #ffd84d);
+    border-radius: 3px;
+}
+
+/* About section */
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Projects section */
+#projects {
+    background-color: #f9f0ff;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 3px 10px rgba(106, 72, 115, 0.1);
+    border-left: 5px solid #b76cc4;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(106, 72, 115, 0.2);
+    border-left: 5px solid #ffd84d;
+}
+
+.project-card h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    color: #6a4873;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Skills section */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    list-style: none;
+}
+
+.skills-list li {
+    background-color: #e4b7f0;
+    color: #6a4873;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.skills-list li:hover {
+    background-color: #ffd84d;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(255, 216, 77, 0.3);
+}
+
+/* Education section */
+.education ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.education li {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.education li:before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    color: #b76cc4;
+}
+
+.education img {
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(106, 72, 115, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.education img:hover {
+    transform: scale(1.05);
+}
+
+/* Table styles */
+.coursework-table {
+    overflow-x: auto;
+    margin-top: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+th, td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid #e4b7f0;
+}
+
+th {
+    background-color: #b76cc4;
+    color: white;
+}
+
+tr:hover {
+    background-color: #fff9fc;
+}
+
+/* Cat video section */
+#cat-video {
+    text-align: center;
+}
+
+#cat-video h3 {
+    font-family: 'Satisfy', cursive;
+    font-size: 1.8rem;
+    color: #b76cc4;
+    margin-bottom: 1rem;
+}
+
+iframe {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(106, 72, 115, 0.2);
+}
+
+/* Contact section */
+.contact-info {
+    text-align: center;
+}
+
+.contact-info p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.contact-info a {
+    color: #b76cc4;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+}
+
+.contact-info a:hover {
+    color: #ffd84d;
+    border-bottom: 2px solid #ffd84d;
+}
+
+/* Footer */
+footer {
+    background-color: #e4b7f0;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+    position: relative;
+}
+
+footer:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, #ffd84d, #b76cc4, #ffd84d);
+}
+
+footer p {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* Fancy animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px rgba(255, 216, 77, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(255, 216, 77, 0.8); }
+    100% { box-shadow: 0 0 5px rgba(255, 216, 77, 0.5); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Apply animations */
+header img {
+    animation: float 6s ease-in-out infinite, glow 3s ease-in-out infinite;
+}
+
+section {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .skills-list {
+        justify-content: flex-start;
+    }
+    
+    iframe {
+        height: 240px;
+    }
+}
+
+/* Theme switcher styling (from your original code) */
+.theme-switcher {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(106, 72, 115, 0.3);
+    padding: 12px;
+    z-index: 1000;
+    border: 2px solid #b76cc4;
+}
+
+.theme-switcher h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align: center;
+    color: #6a4873;
+}
+
+.theme-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.theme-button {
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.theme-button:hover {
+    background-color: #e4b7f0;
+    color: #6a4873;
+}
+
+.theme-button.active {
+    background-color: #b76cc4;
+    color: white;
+    border-color: #6a4873;
+}
