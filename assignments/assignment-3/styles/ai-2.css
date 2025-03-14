@@ -1,0 +1,447 @@
+/* Tangled Lantern Scene Portfolio Theme
+   Created for Arianna Lansang's portfolio
+   
+   Color palette:
+   - Deep night blue: #0a1931 (Night sky)
+   - Soft purple: #7158a6 (Rapunzel's dress)
+   - Warm gold: #ffd56b (Lantern glow)
+   - Soft orange: #ff9e4f (Lantern light)
+   - Light purple: #b99ced (Soft accents)
+   - Dark purple: #37206a (Deep accents)
+*/
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Tangerine:wght@400;700&display=swap');
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #0a1931;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="%23ffdf7e" opacity="0.2"/></svg>');
+}
+
+/* Header and navigation styles */
+header {
+    background: linear-gradient(rgba(10, 25, 49, 0.8), rgba(10, 25, 49, 0.9)), url('images/pink-clouds.gif');
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Lantern floating animation in header */
+header:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle, rgba(255, 213, 107, 0.15) 10%, transparent 10%),
+                      radial-gradient(circle, rgba(255, 213, 107, 0.1) 5%, transparent 5%);
+    background-size: 50px 50px, 30px 30px;
+    background-position: 0 0, 25px 25px;
+    animation: floatLanterns 15s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes floatLanterns {
+    0% {
+        background-position: 0 0, 25px 25px;
+    }
+    100% {
+        background-position: 50px 50px, 75px 75px;
+    }
+}
+
+header img {
+    border-radius: 50%;
+    border: 5px solid #ff9e4f;
+    box-shadow: 0 0 30px rgba(255, 158, 79, 0.6);
+    transition: transform 0.5s ease;
+    position: relative;
+    z-index: 1;
+}
+
+header img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 158, 79, 0.8);
+}
+
+header h1 {
+    font-family: 'Tangerine', cursive;
+    font-size: 5rem;
+    font-weight: 700;
+    color: #ffd56b;
+    text-shadow: 2px 2px 10px rgba(255, 158, 79, 0.8);
+    margin-top: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #b99ced;
+    margin-bottom: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background-color: rgba(113, 88, 166, 0.3);
+    border: 1px solid rgba(185, 156, 237, 0.3);
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 158, 79, 0.5);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255, 213, 107, 0.6);
+    transform: translateY(-3px);
+    border-color: rgba(255, 213, 107, 0.6);
+}
+
+/* Main content styles */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    border-radius: 15px;
+    background-color: rgba(18, 33, 65, 0.8);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 158, 79, 0.2);
+}
+
+/* Lantern glow effect for sections */
+section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 213, 107, 0.1), transparent 70%);
+    pointer-events: none;
+}
+
+h2 {
+    font-family: 'Tangerine', cursive;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffd56b;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    text-shadow: 0 0 5px rgba(255, 158, 79, 0.5);
+}
+
+h2:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #ff9e4f, transparent);
+    border-radius: 3px;
+}
+
+/* About section */
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    color: #e0e0e0;
+}
+
+/* Projects section */
+#projects {
+    background-color: rgba(55, 32, 106, 0.5);
+}
+
+.project-card {
+    background-color: rgba(18, 33, 65, 0.8);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    border-left: 5px solid #7158a6;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(255, 158, 79, 0.3);
+    border-left: 5px solid #ff9e4f;
+}
+
+.project-card h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    color: #ffd56b;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Skills section */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    list-style: none;
+}
+
+.skills-list li {
+    background-color: rgba(113, 88, 166, 0.3);
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(185, 156, 237, 0.3);
+}
+
+.skills-list li:hover {
+    background-color: rgba(255, 158, 79, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(255, 213, 107, 0.3);
+    border-color: rgba(255, 213, 107, 0.5);
+}
+
+/* Education section */
+.education {
+    position: relative;
+}
+
+.education ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.education li {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    color: #e0e0e0;
+}
+
+.education li:before {
+    display: none; /* Remove the star bullet */
+}
+
+.education img {
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    order: -1; /* This puts the image before the text */
+    flex-shrink: 0; /* Prevents the image from shrinking */
+}
+
+.education img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 158, 79, 0.5);
+}
+
+/* Table styles */
+.coursework-table {
+    overflow-x: auto;
+    margin-top: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+th, td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(113, 88, 166, 0.5);
+}
+
+th {
+    background-color: rgba(113, 88, 166, 0.7);
+    color: #ffd56b;
+}
+
+tr:hover {
+    background-color: rgba(255, 158, 79, 0.1);
+}
+
+/* Cat video section */
+#cat-video {
+    text-align: center;
+}
+
+#cat-video h3 {
+    font-family: 'Tangerine', cursive;
+    font-size: 2.5rem;
+    color: #ffd56b;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px rgba(255, 158, 79, 0.5);
+}
+
+iframe {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(113, 88, 166, 0.5);
+}
+
+/* Contact section */
+.contact-info {
+    text-align: center;
+}
+
+.contact-info p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+}
+
+.contact-info a {
+    color: #b99ced;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+}
+
+.contact-info a:hover {
+    color: #ffd56b;
+    border-bottom: 2px solid #ffd56b;
+    text-shadow: 0 0 10px rgba(255, 213, 107, 0.5);
+}
+
+/* Footer */
+footer {
+    background-color: rgba(10, 25, 49, 0.9);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+    position: relative;
+    border-top: 1px solid rgba(113, 88, 166, 0.5);
+}
+
+footer:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, transparent, rgba(255, 158, 79, 0.5), transparent);
+}
+
+footer p {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #b99ced;
+}
+
+/* Fancy animations */
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes lanternGlow {
+    0% { box-shadow: 0 0 10px rgba(255, 158, 79, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(255, 158, 79, 0.7); }
+    100% { box-shadow: 0 0 10px rgba(255, 158, 79, 0.3); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating lanterns background */
+.lantern {
+    position: fixed;
+    background-color: rgba(255, 213, 107, 0.1);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(3px);
+    pointer-events: none;
+}
+
+/* Apply animations */
+header img {
+    animation: float 6s ease-in-out infinite, lanternGlow 4s ease-in-out infinite;
+}
+
+section {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 3.5rem;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    .skills-list {
+        justify-content: flex-start;
+    }
+    
+    iframe {
+        height: 240px;
+    }
+}
