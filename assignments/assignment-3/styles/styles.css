@@ -12,8 +12,6 @@ body {
     background-color: var(--pink);
     color: var(--pink-5);
     margin: 0;
-    line-height: 1.6;
-    overflow-x: hidden;
 }
 
 /* Styled header */
@@ -99,6 +97,7 @@ h2 {
 .education {
     list-style: none;
 }
+
 .education li {
     display: inline-block;
     margin-left: 0;
@@ -123,6 +122,11 @@ h2 {
 .coursework-table th {
     background-color: var(--pink-2);
     color: white;
+}
+
+/* Video */
+iframe {
+    max-width: 100%;
 }
 
 /* Footer styling */
