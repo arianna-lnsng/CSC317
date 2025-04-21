@@ -9,9 +9,9 @@
 ##  Assignment 4: The Exciting World of JavaScript
 
 ## Links
-portfolio: https://arianna-lnsng.github.io/CSC317/ 
-calcualtor: https://arianna-lnsng.github.io/CSC317/assignments/assignment-4/calculator.html
-
+repository: https://github.com/arianna-lnsng/CSC317
+portfolio: https://arianna-lnsng.github.io/CSC317/index.html
+calculator: https://arianna-lnsng.github.io/CSC317/assignments/assignment-4/calculator.html
 
 
 ## Description:
