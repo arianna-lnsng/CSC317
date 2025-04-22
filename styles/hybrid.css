@@ -234,6 +234,11 @@ h2:after {
     color: var(--pink-deep);
 }
 
+.project-card img {
+    max-height: 200px;
+    max-width: 100%;
+}
+
 /* Skills section */
 .skills-list {
     display: flex;

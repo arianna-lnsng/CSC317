@@ -225,6 +225,10 @@ h2:after {
     color: #ffd56b;
 }
 
+.project-card img {
+    max-height: 200px;
+    max-width: 100%;
+}
 
 /* Skills section */
 .skills-list {
@@ -449,4 +453,8 @@ section {
     iframe {
         height: 240px;
     }
+}
+
+.theme-switcher {
+    color: black;
 }

@@ -173,6 +173,12 @@ h2:after {
     color: #6a4873;
 }
 
+.project-card img {
+    max-height: 200px;
+    max-width: 100%;
+}
+
+
 /* Skills section */
 .skills-list {
     display: flex;

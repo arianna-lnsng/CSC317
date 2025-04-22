@@ -36,6 +36,11 @@ header img {
     border-style: outset;
 }
 
+.project-card img {
+    max-height: 200px;
+    max-width: 100%;
+}
+
 /* Links */
 a {
     color: white;
@@ -146,6 +151,7 @@ footer {
     text-align: center;
     padding: 10px;
     margin-top: 20px;
+    max-width: 100vw;
 }
 
 /* Responsive design */
