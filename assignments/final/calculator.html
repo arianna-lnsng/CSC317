@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles/calculator.css" id="calculator-css-theme">
+</head>
+
+<body>
+    <a href="index.html" id="back-btn">Back to Portfolio</a>
+    <div class="calculator">
+        <div class="display">
+            <div id="result">0</div>
+        </div>
+        <div class="buttons">
+            <button class="btn mem" id="mem-add">M+</button>
+            <button class="btn mem" id="mem-sub">M-</button>
+            <button class="btn mem" id="mem-recall">MR</button>
+            <button class="btn mem" id="mem-clear">MC</button>
+
+            <button class="btn utility" id="clear">AC</button>
+            <button class="btn utility" id="positive-negative">+/-</button>
+            <button class="btn utility" id="percentage">%</button>
+            <button class="btn operator" id="divide">÷</button>
+
+            <button class="btn number" id="seven">7</button>
+            <button class="btn number" id="eight">8</button>
+            <button class="btn number" id="nine">9</button>
+            <button class="btn operator" id="multiply">×</button>
+
+            <button class="btn number" id="four">4</button>
+            <button class="btn number" id="five">5</button>
+            <button class="btn number" id="six">6</button>
+            <button class="btn operator" id="subtract">-</button>
+
+            <button class="btn number" id="one">1</button>
+            <button class="btn number" id="two">2</button>
+            <button class="btn number" id="three">3</button>
+            <button class="btn operator" id="add">+</button>
+
+            <button class="btn number zero" id="zero">0</button>
+            <button class="btn number" id="decimal">.</button>
+            <button class="btn operator" id="equals">=</button>
+        </div>
+    </div>
+    <!-- list of keyboard buttons-->
+    <section class="guide"> 
+        <h3>Keyboard Buttons:</h3>
+        <ul>
+        <li>Numbers 0-9: Press corresponding number key</li>
+        <li>Operators: + - * / (press corresponding key)</li>
+        <li>Equals: Enter or =</li>
+        <li>Clear: Escape or c</li>
+        <li>Decimal: .</li>
+        <li>Backspace: Delete last character</li>
+        <li>Memory Add (M+): Ctrl/Cmd + p</li>
+        <li>Memory Subtract (M-): Ctrl/Cmd + m</li>
+        <li>Memory Recall (MR: ): Ctrl/Cmd + r</li>
+        <li>Memory Clear (MC): Ctrl/Cmd + l</li>
+        </ul>
+    </section>
+    <div class="calculator-theme-switcher">
+        <h3>Theme Switcher</h3>
+        <div class="calculator-theme-buttons">
+            <button class="calculator-theme-button active" data-theme="calculator">Default</button>
+            <button class="calculator-theme-button" data-theme="calculator2">Pink</button>
+            <button class="calculator-theme-button" data-theme="calculator3">Blue</button>
+            <button class="calculator-theme-button" data-theme="calculator0">Hand-Written</button>
+        </div>
+    </div>
+    <script src="scripts/calculator.js"></script>
+    <!-- Theme Switcher Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get all theme buttons
+            const themeButtons = document.querySelectorAll('.calculator-theme-button');
+            // Get the stylesheet link element
+            const themeStylesheet = document.getElementById('calculator-css-theme');
+
+            // Function to set active theme
+            function setActiveTheme(themeName) {
+                // Update stylesheet href
+                themeStylesheet.href = `styles/${themeName}.css`;
+
+                // Update active button state
+                themeButtons.forEach(button => {
+                    if (button.dataset.theme === themeName) {
+                        button.classList.add('active');
+                    } else {
+                        button.classList.remove('active');
+                    }
+                });
+
+                // Save preference to localStorage
+                localStorage.setItem('calculatorTheme', themeName);
+            }
+
+            // Add click event to all theme buttons
+            themeButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const themeName = this.dataset.theme;
+                    setActiveTheme(themeName);
+                });
+            });
+
+            // Check if there's a saved theme preference
+            const savedTheme = localStorage.getItem('calculatorTheme');
+            if (savedTheme) {
+                setActiveTheme(savedTheme);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    font: "Segoe UI";
+    background-color: #000;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Back button */
+#back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+/* Calculator Section */
+.calculator {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Display area */
+.display {
+    width: 260px;
+    background-color: #000;
+    color: white;
+    text-align: right;
+    padding: 20px;
+    font-size: 36px;
+    border-bottom: 1px solid #333;
+}
+
+/* Button grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 65px);
+    gap: 10px;
+    padding: 20px;
+}
+
+.btn {
+    font-size: 22px;
+    padding: 20px;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    background-color: #333;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #444;
+}
+
+.operator {
+    background-color: #f69906;
+}
+
+.operator:hover {
+    background-color: #e28a00;
+}
+
+.utility {
+    background-color: #a5a5a5;
+    color: black;
+}
+
+.utility:hover {
+    background-color: #999;
+}
+
+.number {
+    background-color: #505050;
+}
+
+.number:hover {
+    background-color: #666;
+}
+
+/* Special styling for zero button */
+.zero {
+    grid-column: span 2;
+    border-radius: 50px;
+    text-align: left;
+    padding-left: 24px;
+}
+
+/* Guide Section */
+.guide {
+    position: absolute;
+    bottom: 100px;
+    right: 20px;
+    font-size: 14px;
+    color: #bbb;
+    max-width: 300px;
+    text-align: left;
+}
+
+.guide h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.guide ul {
+    padding-left: 16px;
+}
+
+.guide li {
+    margin-bottom: 4px;
+}
+
+/* Theme Switcher */
+.calculator-theme-switcher {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+.calculator-theme-switcher h3 {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.calculator-theme-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.calculator-theme-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.calculator-theme-button:hover {
+    background-color: #555;
+}
+
+.calculator-theme-button.active {
+    background-color: #007bff;
+}
